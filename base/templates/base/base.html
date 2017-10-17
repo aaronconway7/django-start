@@ -2,25 +2,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {# Meta Tags #}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="Aaron Conway">
+    <meta name="application-name" content="">
+    {# favicons #}
+    {# generate favicons using https://www.favicon-generator.org/ #}
+    {# Page Title #}
     <title>{% block title %}Hello Django{% endblock title %}</title>
+    {# CSS files #}
+    <link rel="stylesheet" href="{% static 'base/css/vendor/eden.min.css' %}">
     <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
     {% block css %}
     {% endblock css %}
 </head>
 <body>
-    <header>
-
-    </header>
+    <header></header>
     <main>
         {% block main %}
         {% endblock main %}
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
+    {# JS files #}
+    <script src="{% static 'base/js/vendor/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'base/js/vendor/eden.min.js' %}" type="text/javascript"></script>
     {% block js %}
     {% endblock js %}
 </body>
